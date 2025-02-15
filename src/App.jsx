@@ -6,18 +6,19 @@ import Code from "./components/Code";
 
 function App() {
 	const { markdownContent, setMarkdownContent, loading,setLoading } = useMarkdown();
+	const start = `# **Hello!** 👋  
+## *I am your AI Code Reviewer* 🧑‍💻  
+
+🔹 **Need a bug fix?** I’ve got you covered.  
+🔹 **Want code improvements?** Let’s make it cleaner.  
+🔹 **Looking for best practices?** I’ll suggest optimizations.  
+
+> 🚀 *Let’s write better code together!*`; 
 
 	useEffect(() => {
 		setLoading(true)
-		fetch("/AI-Code-Reviewer/start.md")
-			.then((response) => response.text())
-			.then((data) => {
-				setMarkdownContent(data);
-			})
-			.catch((error) => {
-				console.error("Error fetching text file:", error);
-			})
-			.finally(()=>{ setLoading(false) });
+		setMarkdownContent(start)
+		setLoading(false)
 	}, []);
 
 	const SkeletonScreen = () => (
