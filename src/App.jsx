@@ -9,14 +9,14 @@ function App() {
 
 	
   useEffect(() => {
-    fetch("/start.md")
-      .then((response) => response.text())
-      .then((data) => {
-        setMarkdownContent(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching text file:", error);
-      });
+    fetch("/AI-Code-Reviewer/start.md")
+		.then((response) => response.text())
+		.then((data) => {
+			setMarkdownContent(data);
+		})
+		.catch((error) => {
+			console.error("Error fetching text file:", error);
+		});
   }, []);
 
 	const SkeletonScreen = () => (
