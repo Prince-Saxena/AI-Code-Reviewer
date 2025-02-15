@@ -16,7 +16,7 @@ const Code = () => {
 
 		setLoading(true);
 		try {
-			console.log(URL);
+			setLoading(true);
 			
 			const response = await axios.post(
 				URL,
