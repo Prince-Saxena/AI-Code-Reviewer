@@ -13,7 +13,7 @@ export default defineConfig({
 				main: "index.html",
 			},
 		},
-		outDir: "dist", // ✅ Ensure Vite outputs to 'dist'
-		emptyOutDir: true, // ✅ Cleans 'dist' before each build
+		outDir: "dist", 
+		emptyOutDir: true, 
 	},
 });
