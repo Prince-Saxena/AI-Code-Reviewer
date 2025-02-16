@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import { useMarkdown } from "./context/Markdown.context";
+import { useMarkdown } from "./context/Markdown";
 import { marked } from "marked";
 import Code from "./components/Code";
 
 function App() {
-	const { markdownContent, setMarkdownContent, loading,setLoading } = useMarkdown();
+	const { markdownContent, setMarkdownContent, loading, setLoading } = useMarkdown();
 	const start = `# **Hello!** 👋  
 ## *I am your AI Code Reviewer* 🧑‍💻  
 
@@ -13,12 +13,12 @@ function App() {
 🔹 **Want code improvements?** Let’s make it cleaner.  
 🔹 **Looking for best practices?** I’ll suggest optimizations.  
 
-> 🚀 *Let’s write better code together!*`; 
+> 🚀 *Let’s write better code together!*`;
 
 	useEffect(() => {
-		setLoading(true)
-		setMarkdownContent(start)
-		setLoading(false)
+		setLoading(true);
+		setMarkdownContent(start);
+		setLoading(false);
 	}, []);
 
 	const SkeletonScreen = () => (

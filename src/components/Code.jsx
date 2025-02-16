@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useMarkdown } from "../context/Markdown.context";
+import { useMarkdown } from "../context/Markdown";
 import axios from "axios";
 
 const Code = () => {
@@ -17,7 +17,7 @@ const Code = () => {
 		setLoading(true);
 		try {
 			setLoading(true);
-			
+
 			const response = await axios.post(
 				URL,
 				{ code },
