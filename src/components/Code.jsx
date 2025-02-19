@@ -41,7 +41,7 @@ const Code = () => {
 	};
 
 	return (
-		<div className="w-1/2 h-full mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg border border-gray-700 mr-2">
+		<div className="w-1/2 max-lg:w-full h-full max-lg:h-full mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg border border-gray-700 mr-2">
 			<h2 className="text-2xl font-bold text-center text-cyan-400 mb-4"> AI Code Reviewer</h2>
 
 			{/* Code Editor Style Textarea */}
@@ -52,7 +52,7 @@ const Code = () => {
 				}}
 				onKeyDown={handleKeyDown}
 				placeholder="// Write your code here..."
-				className="w-full h-4/5 px-4 py-3 bg-gray-800 text-blue-100 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400 text-sm font-mono resize-none "
+				className="w-full h-4/5 max-lg:h-3/5 px-4 py-3 bg-gray-800 text-blue-100 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400 text-sm font-mono resize-none "
 			/>
 
 			{/* Send Button */}

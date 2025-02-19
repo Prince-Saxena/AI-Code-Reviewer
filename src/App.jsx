@@ -34,12 +34,12 @@ function App() {
 	);
 
 	return (
-		<div className="h-screen w-full bg-gray-800 text-white flex flex-row items-center justify-center p-4">
+		<div className="h-screen w-full bg-gray-800 text-white flex flex-col min-lg:flex-row items-center justify-center p-4">
 			<Code />
 			{loading && <SkeletonScreen />}
 			{!loading && (
 				<div
-					className="w-1/2 h-full mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg border border-gray-700 sm:w-11/12 md:w-4/5 lg:w-3/4 xl:w-2/3 overflow-y-auto relative"
+					className="w-1/2 max-lg:w-full max-lg:mt-4 h-full mx-auto p-4 bg-gray-900 text-white rounded-lg shadow-lg border border-gray-700  overflow-y-auto relative"
 					dangerouslySetInnerHTML={{ __html: marked(markdownContent) }}
 				>
 					{/* <ReactMarkdown>{markdownContent}</ReactMarkdown> */}
